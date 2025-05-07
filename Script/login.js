@@ -20,7 +20,7 @@ async function login(event, loginBtn) {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch('https://dh-ganderbal-backend.onrender.com/api/login', {
+        const response = await fetch('https://backend-h74a.onrender.com/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

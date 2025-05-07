@@ -28,7 +28,7 @@ form.addEventListener('submit', async (event) => {
     formData.append('designation', document.getElementById('designationInput').value);
 
     try {
-        const response = await fetch('https://dh-ganderbal-backend.onrender.com/api/management', {
+        const response = await fetch('https://backend-h74a.onrender.com/api/management', {
             method: 'POST',
             body: formData,
             credentials: 'include',
@@ -77,7 +77,7 @@ function resizeImage(file, maxWidth) {
 }
 
 export function loadAllManagementEntries() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/management') // Adjusted the endpoint to match the backend route
+    fetch('https://backend-h74a.onrender.com/api/management') // Adjusted the endpoint to match the backend route
         .then(res => res.json())
         .then(data => {
             list.innerHTML = '';
@@ -116,7 +116,7 @@ window.deleteManagementEntry = function (id) {
     const confirmDelete = confirm("Are you sure you want to delete this entry?");
     if (!confirmDelete) return;
 
-    fetch(`https://dh-ganderbal-backend.onrender.com/api/management/${id}`, {
+    fetch(`https://backend-h74a.onrender.com/api/management/${id}`, {
         method: 'DELETE',
         credentials: 'include',
     })

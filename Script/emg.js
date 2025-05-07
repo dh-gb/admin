@@ -1,6 +1,6 @@
 // To fetch OPD data from server to display on admin panel
 export function initEMG() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/emg')
+    fetch('https://backend-h74a.onrender.com/api/emg')
         .then(res => {
             if (!res.ok) throw new Error('Failed to fetch Emergency data');
             return res.json();
@@ -38,7 +38,7 @@ window.addEMG = function () {
     const schedule = selectedDays.join(', ');
 
     //Send data to backend
-    fetch('https://dh-ganderbal-backend.onrender.com/api/emg', {
+    fetch('https://backend-h74a.onrender.com/api/emg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ dept, room, schedule }),
@@ -84,7 +84,7 @@ function renderEMG(data) {
 window.deleteEntryEMG = function (id) {
     const confirmDelete = confirm('Are you sure you want to delete this PDF?');
     if (!confirmDelete) return;
-    fetch(`https://dh-ganderbal-backend.onrender.com/api/emg/${id}`,
+    fetch(`https://backend-h74a.onrender.com/api/emg/${id}`,
         { method: 'Delete',
             credentials: 'include',
          })

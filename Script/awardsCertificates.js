@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
     formData.append('image', resizedBlob, file.name); // Pass resized blob
     formData.append('description', document.getElementById('descriptionInput').value);
     try {
-        const response = await fetch('https://dh-ganderbal-backend.onrender.com/api/awardsCertificates', {
+        const response = await fetch('https://backend-h74a.onrender.com/api/awardsCertificates', {
             method: 'POST',
             body: formData,
             credentials: 'include',
@@ -81,7 +81,7 @@ function resizeImage(file, maxSize) {
 }
 
 export function loadAllawardsCertificatesEntries() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/awardsCertificates') // Adjusted the endpoint to match the backend route
+    fetch('https://backend-h74a.onrender.com/api/awardsCertificates') // Adjusted the endpoint to match the backend route
         .then(res => res.json())
         .then(data => {
             list.innerHTML = '';
@@ -117,7 +117,7 @@ window.deleteawardsCertificatesEntry = function (id) {
     const confirmDelete = confirm("Are you sure you want to delete this entry?");
     if (!confirmDelete) return;
 
-    fetch(`https://dh-ganderbal-backend.onrender.com/api/awardsCertificates/${id}`, {
+    fetch(`https://backend-h74a.onrender.com/api/awardsCertificates/${id}`, {
         method: 'DELETE',
         credentials: 'include',
     })

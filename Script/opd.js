@@ -1,6 +1,6 @@
 // To fetch OPD data from server to display on admin panel
 export function initOPD() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/opd')
+    fetch('https://backend-h74a.onrender.com/api/opd')
         .then(res => {
             if (!res.ok) throw new Error('Failed to fetch OPD data');
             return res.json();
@@ -38,7 +38,7 @@ window.addOPD = function () {
     const schedule = selectedDays.join(', ');
 
     //Send data to backend
-    fetch('https://dh-ganderbal-backend.onrender.com/api/opd', {
+    fetch('https://backend-h74a.onrender.com/api/opd', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ dept, room, schedule }),
@@ -84,7 +84,7 @@ function renderOPD(data) {
 window.deleteEntryOPD = function (id) {
     const confirmDelete = confirm('Are you sure you want to delete this PDF?');
     if (!confirmDelete) return;
-    fetch(`https://dh-ganderbal-backend.onrender.com/api/opd/${id}`,
+    fetch(`https://backend-h74a.onrender.com/api/opd/${id}`,
         {
             method: 'Delete',
             credentials: 'include',

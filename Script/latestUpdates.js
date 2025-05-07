@@ -24,7 +24,7 @@ form.addEventListener('submit', function (event) {
    FUNCTION: Load all updates from backend and display on page
 ============================================================ */
 export function loadAllPDFUpdates() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/latest-updates')
+    fetch('https://backend-h74a.onrender.com/api/latest-updates')
         .then(res => res.json())
         .then(data => {
             list.innerHTML = '';
@@ -44,7 +44,7 @@ function uploadPDFUpdate(description, pdfFile) {
     formData.append('title', description);
     formData.append('pdf', pdfFile);
 
-    fetch('https://dh-ganderbal-backend.onrender.com/api/latest-updates', {
+    fetch('https://backend-h74a.onrender.com/api/latest-updates', {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -101,7 +101,7 @@ window.deletePDFUpdate = function (id) {
     const confirmDelete = confirm('Are you sure you want to delete this PDF?');
     if (!confirmDelete) return;
 
-    fetch(`https://dh-ganderbal-backend.onrender.com/api/latest-updates/${id}`, {
+    fetch(`https://backend-h74a.onrender.com/api/latest-updates/${id}`, {
         method: 'DELETE',
         credentials: 'include',
     })

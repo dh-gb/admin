@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('logoutBtn').addEventListener('click', async () => {
         try {
-            await fetch('https://dh-ganderbal-backend.onrender.com/api/logout', {
+            await fetch('https://backend-h74a.onrender.com/api/logout', {
                 method: 'POST',
                 credentials: 'include' // Required to send the auth cookie
             });
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Check if user is logged in using cookie
 function checkLoginStatus() {
-    fetch('https://dh-ganderbal-backend.onrender.com/api/protected-endpoint', {
+    fetch('https://backend-h74a.onrender.com/api/protected-endpoint', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
