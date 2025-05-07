@@ -1,0 +1,111 @@
+body {
+    background-color: #ccc;
+}
+
+.login-box {
+    margin: 100px auto;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 82, 147, 0.5);
+}
+
+.login-box input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 0.5rem;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2 ease;
+}
+
+.button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Styling Admin Panel*/
+
+#sections {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.container_opd,
+.container_emg,
+.container_pdf,
+.container_management,
+.container_awardscertificates {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 3px solid;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-section_opd,
+.form-section_emg,
+#latestUpdatesForm,
+#managementForm,
+#awardscertificatesForm {
+    width: 40%;
+}
+
+.form-section_opd input,
+.form-section_emg input,
+#latestUpdatesForm input,
+#managementForm input,
+#awardscertificatesForm input {
+    margin: 5px;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.data-section {
+    width: 50%;
+    border: 1px solid;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.data-entry {
+    margin: 10px;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logoutBtn {
+    background-color: red;
+}
+
+.passport {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+}

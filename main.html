@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="button" id="logoutBtn" style="float: right; margin: 10px;">Logout</button>
+    <h1>Admin Dashboard</h1>
+    <div id="sections">
+
+        <!-- Management -->
+        <h2>1. Management</h2>
+        <div class="container_management">
+            <form id="managementForm" enctype="multipart/form-data">
+                <label>Upload Image:</label>
+                <input type="file" id="imageInput" accept="image/*" required /><br>
+                <input type="text" id="nameInput" placeholder="Enter Name" required /><br>
+                <input type="text" id="educationInput" placeholder="Enter Education" required /><br>
+                <input type="text" id="designationInput" placeholder="Enter Designation" required /><br>
+                <button class="button" id="mgmt_button" type="submit">Submit</button>
+            </form>
+            <div class="data-section" id="managementList"></div>
+        </div>
+
+        <!-- Awards and certificates -->
+        <h2>5. Awards and Certificates</h2>
+        <div class="container_awardscertificates">
+            <form id="awardscertificatesForm" enctype="multipart/form-data">
+                <label>Upload Image:</label>
+                <input type="file" id="awardimageInput" accept="image/*" required /><br>
+                <input type="text" id="descriptionInput" placeholder="Enter Description" required /><br>
+                <button class="button" id="awd_button" type="submit">Submit</button>
+            </form>
+            <div class="data-section" id="awardscertificateList"></div>
+        </div>
+
+        <!-- OPD  -->
+        <h2>3. OPD Schedule</h2>
+        <div class="container_opd">
+            <div class="form-section_opd">
+                <input type="text" id="department_opd" placeholder="Deparment Name"><br>
+                <input type="text" id="room_opd" placeholder="Room No.">
+                <div id="schedule_opd">
+                    <label><input type="checkbox" value="Monday"> Monday</label><br>
+                    <label><input type="checkbox" value="Tuesday"> Tuesday</label><br>
+                    <label><input type="checkbox" value="Wednesday"> Wednesday</label><br>
+                    <label><input type="checkbox" value="Thursday"> Thursday</label><br>
+                    <label><input type="checkbox" value="Friday"> Friday</label><br>
+                    <label><input type="checkbox" value="Saturday"> Saturday</label><br>
+                    <label><input type="checkbox" value="Sunday"> Sunday</label><br>
+                </div>
+                <button class="button" onclick="addOPD()">Submit</button>
+            </div>
+            <div class="data-section" id="opdDataList">
+            </div>
+        </div>
+
+        <!-- Emergency -->
+        <h2>4. Emergency Schedule</h2>
+        <div class="container_emg">
+            <div class="form-section_emg">
+                <input type="text" id="department_emg" placeholder="Deparment Name"><br>
+                <input type="text" id="room_emg" placeholder="Room No.">
+                <div id="schedule_emg">
+                    <label><input type="checkbox" value="Monday"> Monday</label><br>
+                    <label><input type="checkbox" value="Tuesday"> Tuesday</label><br>
+                    <label><input type="checkbox" value="Wednesday"> Wednesday</label><br>
+                    <label><input type="checkbox" value="Thursday"> Thursday</label><br>
+                    <label><input type="checkbox" value="Friday"> Friday</label><br>
+                    <label><input type="checkbox" value="Saturday"> Saturday</label><br>
+                    <label><input type="checkbox" value="Sunday"> Sunday</label><br>
+                </div>
+                <button class="button" onclick="addEMG()">Submit</button>
+            </div>
+            <div class="data-section" id="emgDataList">
+            </div>
+        </div>
+
+        <!-- Latest Updates -->
+        <h2>2. Latest Updates</h2>
+        <div class="container_pdf">
+            <form id="latestUpdatesForm" enctype="multipart/form-data">
+                <input type="text" id="title" placeholder="Enter PDF description" required />
+                <input type="file" id="pdf" accept="application/pdf" required />
+                <button class="button" id="updt_button" type="submit">Upload PDF</button>
+            </form>
+            <div class="data-section" id="latestUpdatesList"></div>
+        </div>
+
+    </div>
+
+    <script type="module" src="Script/main.js"></script>
+</body>
+
+</html>
